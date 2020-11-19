@@ -1,9 +1,9 @@
-app-redit/node_modules
+**/node_modules
 # /app-redit/node_modules
 # /app-redit/e2e
-app-redit/e2e
-product-app/node_modules
+**/e2e
+**/node_modules
 # /product-app/node_modules
 # /product-app/e2e
-product-app/e2e
+**p/e2e
 /node_modules
