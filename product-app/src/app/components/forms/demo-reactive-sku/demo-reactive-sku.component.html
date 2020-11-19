@@ -1,0 +1,25 @@
+
+<div class="card">
+  <h2> Demo Form: Sku with Builder</h2>
+  <form [formGroup]="myForm" (ngSubmit)="onSubmit(myForm.value)"
+  [class.error]="!myForm.valid && myForm.touched">
+
+    <div class="form-group"
+      [class.error]="!myForm.controls['sku'].valid && myForm.controls['sku'].touched">
+      <label for="skuInput">SKU</label>
+      <input type="text" id="skuInput" class="form-control is-valid"
+      placeholder="" [formControl]="myForm.controls['sku']" [ngClass]="{'is-invalid': !formControls.valid }">
+
+      <div *ngIf="formControls.hasError('invalidSku')"
+        class="ui error message">SKU must begin with <span>123</span>
+      </div>
+
+      <div *ngIf="!formControls.valid" class="ui error message">SKU is invalid minimo</div>
+      <div *ngIf="formControls.hasError('required')"class="ui error message">SKU is required</div>
+    </div>
+
+    <div *ngIf="!myForm.valid" class="ui error message">Form is invalid</div>
+
+    <button type="submit" class="btn-lg btn-secondary">Submit</button>
+  </form>
+</div>

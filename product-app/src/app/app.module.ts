@@ -12,6 +12,7 @@ import { ProductImageComponent } from './components/product-image/product-image.
 import { PriceDisplayComponent } from './components/price-display/price-display.component';
 import { ProductDepartmentComponent } from './components/product-department/product-department.component';
 import { DemoFormSkuComponent } from './components/forms/demo-form-sku/demo-form-sku.component';
+import { DemoReactiveSkuComponent } from './components/forms/demo-reactive-sku/demo-reactive-sku.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { DemoFormSkuComponent } from './components/forms/demo-form-sku/demo-form
     ProductImageComponent,
     PriceDisplayComponent,
     ProductDepartmentComponent,
-    DemoFormSkuComponent
+    DemoFormSkuComponent,
+    DemoReactiveSkuComponent
   ],
   imports: [
     BrowserModule,
