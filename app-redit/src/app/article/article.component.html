@@ -1,0 +1,13 @@
+<form>
+  <div class="form-group">
+    <label for="title">Title</label>
+    <input class='form-control' type="text"
+    name="title" id="title" #newtitle>
+  </div>
+  <div class="form-group">
+    <label for="link">link</label>
+    <input class='form-control' type="text"
+    name="link" id="link" #newlink>
+  </div>
+  <button (click)="onSubmit(newtitle, newlink)" class="btn btn-lg bg-primary text-white"> enviar </button>
+</form>

@@ -1,0 +1,45 @@
+<div class="col-3">
+
+  <div class="center">
+    <div class="badge badge-primary">
+      <div class="value">
+        {{ article.votes }}
+          votos
+        </div>
+        <div class="label">
+          Points
+        </div>
+    </div>
+  </div>
+</div>
+<div class="col-9">
+  <div class="row">
+    <a class="ui large header"
+    href="{{ article.link }}">
+    titulo:
+    {{ article.title }}
+    </a>
+  </div>
+  <div class="row">
+    <ul class="list-group list-group-horizontal">
+      <li class="list-group-item">
+        <button  (click)="voteUp(article.votes)" class="btn btn-lg bg-secondary text-white">
+      
+        <i class="arrow up icon"></i>
+            upvote
+        </button>
+      </li>
+      <li class="list-group-item">
+        <button (click)="voteDown(article.votes)" class="btn btn-lg bg-secondary text-white">
+      
+        <i class="arrow down icon"></i>
+        downvote
+      </button>
+    </li>
+  </ul>
+  </div>
+
+</div>
+
+
+

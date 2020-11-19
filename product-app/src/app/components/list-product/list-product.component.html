@@ -1,0 +1,8 @@
+<div class="list-group-item">
+  <product-row
+    *ngFor="let myProduct of productList"
+    [product]="myProduct"
+    (click)='clicked(myProduct)'
+    [class.active]="isSelected(myProduct)">
+  </product-row>
+</div>

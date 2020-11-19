@@ -1,0 +1,13 @@
+<div class="card">
+  <h2 class="ui header">Demo Form: Sku</h2>
+  <form #f="ngForm" (ngSubmit)="onSubmit(f.value)" class="ui form">
+
+    <div class="form-group">
+      <label for="skuInput">SKU</label>
+      <input type="text" id="skuInput" class="form-control"
+      placeholder="SKU" name="sku" ngModel aria-describedby="skuInput">
+    </div>
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>

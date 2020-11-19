@@ -1,0 +1,19 @@
+<div class="col-3">
+    <product-image [product]="product"></product-image>
+</div>
+<div class="col-3">
+
+  <div class="content">
+    <div class="header">{{ product.name }}</div>
+    <div class="meta">
+      <div class="product-sku">SKU #{{ product.sku }}</div>
+    </div>
+    <div class="description">
+      <product-department [product]="product"></product-department>
+    </div>
+  </div>
+</div>
+<div class="col-3">
+  <price-display [price]="product.price"></price-display>
+</div>
+
