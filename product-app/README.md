@@ -5,6 +5,7 @@ npm i --save semantic-ui-css
 then Inside of this angularjon7
  you can import the style-sheets for the different components you want to use. We can add support for buttons like so:
 
+ git rm --cached angulartest -f
  "node_modules/semantic-ui-css/components/button.min.css"
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">

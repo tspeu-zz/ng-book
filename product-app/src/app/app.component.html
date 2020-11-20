@@ -2,8 +2,22 @@
 <!-- Toolbar -->
 <app-toolbar></app-toolbar>
 
-<div class="container" role="main">
 
+<div class="container" role="main">
+<!--  -->
+<div style="margin:auto; width: 70%; margin-top: 30px;" class="mb-2">
+  <app-search-bar (onSelectedOption)="onSelectedFilter($event)"></app-search-bar>
+</div>
+
+<div class="group">
+  <h2 style="text-align:center">Data</h2>
+  <div *ngFor="let posts of post" class="card mt-2">
+    <p><b>Item :</b>{{posts.id}}</p>
+    <p><b>Title :</b> {{posts.title}}</p>
+    <p><b>Body: </b>{{posts.body}}</p>
+  </div>
+</div>
+<!--  -->
   <!-- Highlight Card -->
   <div class="card small">
     <demo-reactive-sku></demo-reactive-sku>

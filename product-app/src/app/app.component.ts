@@ -1,5 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, OnInit  } from '@angular/core';
+import { Post } from './models/post.model';
 import { Product } from './models/product.model';
+import { DataService } from './services/data.service';
 
 @Component({
   selector: 'app-root',
@@ -9,10 +11,11 @@ import { Product } from './models/product.model';
 export class AppComponent {
   title = 'product-app';
   productos: Product[];
+  post: Post[]
   /**
    *
    */
-  constructor() {
+  constructor(private dataService: DataService) {
     this.productos= [
       new Product(
       "NICEHAT",
@@ -33,12 +36,28 @@ export class AppComponent {
     ];
   }
 //
-
+  ngOnInit() {
+    this.dataService.getPost().subscribe(posts => {
+      this.post = posts;
+      this.dataService.postData = posts;
+    });
+  }
 
 //
-productSeleccionado(product: Product): void {
-  console.log('Product clicked: ', product);
-}
-//
+  productSeleccionado(product: Product): void {
+    console.log('Product clicked: ', product);
+  }
+  //
+  onSelectedFilter(e) {
+    this.getFilteredExpenseList();
+  }
+  //
+  getFilteredExpenseList() {
+    if (this.dataService.searchOption.length > 0)
+      this.post = this.dataService.filteredListOptions();
+    else {
+      this.post = this.dataService.postData;
+    }
 
+  }
 }

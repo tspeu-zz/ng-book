@@ -22,14 +22,28 @@ export class DemoReactiveSkuComponent implements OnInit {
     });
 
     this.formControls = this.myForm.controls['sku'];
+
+    this.formControls.valueChanges.subscribe(
+      (value: string) => {
+        console.log('sku changed to:', value);
+      }
+    );
+
+    this.myForm.valueChanges.subscribe(
+      (form: any) => {
+        console.log('form changed to:', form);
+      }
+    );
   }
 
   ngOnInit(): void {
   }
 
+//
   onSubmit(value: string): void {
     console.log('form:->',value);
 
   }
+
 
 }
