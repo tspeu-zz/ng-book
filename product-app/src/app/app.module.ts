@@ -24,6 +24,8 @@ import { DemoFormSkuComponent } from './components/forms/demo-form-sku/demo-form
 import { DemoReactiveSkuComponent } from './components/forms/demo-reactive-sku/demo-reactive-sku.component';
 import { SearchBarComponent } from './components/search-bar/search-bar.component';
 import { DataService } from './services/data.service';
+import { PopupDirective } from './directives/popup.directive';
+import { PricesService } from './services/prices.service';
 
 @NgModule({
   declarations: [
@@ -37,7 +39,8 @@ import { DataService } from './services/data.service';
     ProductDepartmentComponent,
     DemoFormSkuComponent,
     DemoReactiveSkuComponent,
-    SearchBarComponent
+    SearchBarComponent,
+    PopupDirective
   ],
   imports: [
     BrowserModule,
@@ -49,7 +52,7 @@ import { DataService } from './services/data.service';
     BrowserAnimationsModule,
     HttpClientModule
   ],
-  providers: [DataService],
+  providers: [DataService, PricesService],
   bootstrap: [AppComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 

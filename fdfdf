@@ -1,0 +1,89 @@
+    for(let i of contacts){
+        let dato = i;
+        console.log('encontrado-------------',dato);
+        if(i.firstName  === name){
+            console.log('encontrado->', dato.firstName)
+            let data = i;
+            for(let k in data){
+                console.log('------------->', k)
+                if(prop === k ){
+                    console.log('encontrado->', i[prop])
+                    return  i[prop]; 
+                }else{
+                    console.log('************>', k)
+                    return "No such property";
+                }
+            }   
+        }
+        else{
+            // console.log( "No such contact");
+            return "No such contact";
+        }
+    }
+    // console.log(ok != undefined ? ok : (re != undefined ? re : ra));
+    // return ok != undefined ? ok : (re != undefined ? re : ra)
+
+
+    function lookUpProfile(name, prop){
+// Only change code below this line
+    // console.log(name);
+    // console.log(prop);
+    //if(i.hasOwnProperty(prop))
+       for(let i=0; i < contacts.length; i++){
+        //    console.log(i);
+        //    console.log(contacts[i]);
+           if(contacts[i].firstName === name){
+               
+                if(contacts[i].hasOwnProperty(prop)){
+                    console.log(contacts[i][prop]);
+                    return contacts[i][prop];
+                }else{
+                    return "No such property";
+                }
+           } 
+       }
+    return "No such contact";
+// Only change code above this line
+}
+Math.floor(Math.random() * 20)
+Math.floor(Math.random() * (max - min + 1)) + min
+
+parseInt(string, radix);
+function checkSign(num) {
+  return (num > 0) ? "positive" : 
+    (num < 0) ? "negative" : "zero";
+
+}
+unshift
+
+function countup(n) {
+  if (n < 1) {
+    return [];
+  } else {
+    const countArray = countup(n - 1);
+    countArray.push(n);
+    return countArray;
+  }
+}
+
+function rangeOfNumbers(startNum, endNum) {
+  if (endNum - startNum === 0) {
+    return [startNum];
+  } else {
+    var numbers = rangeOfNumbers(startNum, endNum - 1);
+    numbers.push(endNum);
+    return numbers;
+  }
+}
+
+function rangeOfNumbers(startNum, endNum) {
+  return startNum === endNum
+    ? [startNum]
+    : rangeOfNumbers(startNum, endNum - 1).concat(endNum);
+}
+
+function rangeOfNumbers(startNum, endNum) {
+  return startNum === endNum
+    ? [startNum]
+    : [...rangeOfNumbers(startNum, endNum - 1), endNum ];
+}

@@ -2,6 +2,7 @@ import { Component, OnInit  } from '@angular/core';
 import { Post } from './models/post.model';
 import { Product } from './models/product.model';
 import { DataService } from './services/data.service';
+import { MockService } from './services/mock.service';
 
 @Component({
   selector: 'app-root',
@@ -15,7 +16,7 @@ export class AppComponent {
   /**
    *
    */
-  constructor(private dataService: DataService) {
+  constructor(private dataService: DataService, private _MockService: MockService) {
     this.productos= [
       new Product(
       "NICEHAT",
